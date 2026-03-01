@@ -71,8 +71,7 @@ body {
     /* Háttérkép beállítása */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-repeat: no-repeat;   
     
     /* Flex layout */
     display: flex;
