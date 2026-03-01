@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p { 
     font-family: 'Crimson Text', serif; 
-    font-size: 1.4rem;  /* 110% az alapból */
+    font-size: 1.4rem;
 }
 
 body { 
@@ -24,19 +24,6 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
-
-/* Nav link custom - DRY principle */
-/* .nav-link-custom {
-    text-decoration: underline; 
-    text-decoration-color: #dc3545;
-    text-underline-offset: 0.25em;
-    text-decoration-opacity: 0;
-    transition: text-decoration-opacity 0.3s ease;
-}
-
-.nav-link-custom:hover {
-    text-decoration-opacity: 1;
-} */
 
 /* ── Intro ──────────────────────────────────────────────────── */
 #intro {
@@ -151,6 +138,44 @@ body {
 .card-content small:last-child {
     font-size: 0.8rem;
     opacity: 0.8;
+}
+
+/* ════════════════════════════════════════════════════════════ */
+/* ── CAROUSEL - BLOG CARD STÍLUS ────────────────────────────── */
+/* ════════════════════════════════════════════════════════════ */
+
+.blog-card-carousel {
+    position: relative;
+    height: 500px;         
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    border-top: 3px solid #dc3545;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog-card-carousel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.46);
+}
+
+
+/* ── CAROUSEL NYILAK ÉS INDIKÁTOROK (Danger: #dc3545) ────────── */
+
+/* #carouselExample .carousel-control-prev-icon,
+#carouselExample .carousel-control-next-icon{
+  filter: brightness(1.8) contrast(1.2) !important;
+  opacity: 1 !important;
+} */
+
+/*Alsó indikátorok pirosra*/
+#carouselExample .carousel-indicators [data-bs-target] {
+    background-color: #dac9cb !important;
 }
 
 /* ── Barátaink ──────────────────────────────────────────────── */
