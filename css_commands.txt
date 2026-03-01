@@ -1,0 +1,300 @@
+CSS – ÖSSZES szelektor + tulajdonság (a két CSS-részből összevonva)
+===================================================================
+
+0) CSS szintaxis “hol kell” gyorstalpaló
+----------------------------------------
+/* ... */
+- Komment. Bármit közé írsz, a böngésző nem értelmezi.
+
+SZELEKTOR { tulajdonság: érték; tulajdonság: érték; }
+- A {} blokkban vannak a “szabályok” (deklarációk).
+- A ; választja el a sorokat.
+
+h1 / p / body / section
+- HTML elem szelektor: az összes ilyen tagre érvényes.
+
+.classNev
+- Ponttal kezdődik: class szelektor (class="classNev").
+
+#idNev
+- Kettőskereszttel kezdődik: id szelektor (id="idNev"). Egyedi elemhez.
+
+A, B, C (vesszővel)
+- Csoportosítás: mindháromra ugyanaz a szabály.
+
+A B (szóköz)
+- Leszármazott (descendant): B csak akkor, ha A belsejében van.
+  Példa: "#intro .container-xxl" -> csak az intro szekción BELÜLI .container-xxl.
+
+:hover
+- Pszeudo-osztály: akkor lép életbe, ha fölé viszed az egeret.
+
+::before
+- Pszeudo-elem: egy “virtuális” elem a kijelölt elem ELEJÉRE.
+  Csak akkor látszik, ha van content: '' (akár üres is).
+
+:last-child
+- Pszeudo-osztály: az adott szülő UTOLSÓ gyereke.
+
+!important
+- Erőlteti a szabályt (felülírja a legtöbb ütközést). Csak indokoltan érdemes.
+
+Kaszkád / ütközés
+- Ha ugyanazt a tulajdonságot több helyen megadod (pl. body kétszer), akkor
+  általában a “később jövő” nyer (ha a specifikusság azonos).
+
+Mértékegységek a kódban
+- px: fix pixel
+- rem: a root (html) betűmérethez viszonyított
+- em: az aktuális elem betűméretéhez viszonyított
+- %: relatív (szülőhöz / tartalomhoz)
+- vh: viewport magasság %-a (100vh = teljes képernyőmagasság)
+- vw: viewport szélesség %-a
+
+Gyakori függvények/értékek
+- url('...'): háttérkép betöltése
+- rgba(r,g,b,a): szín alfa (átlátszóság) csatornával
+- clamp(min, preferred, max): rugalmas méret, de min/max közé szorítva
+- min(a,b): a kettő közül a kisebb értéket használja
+
+
+1) Kinyert szelektorok (összevonva) + “mit céloz”
+-------------------------------------------------
+
+[Tipográfia]
+h1, h2, h3, h4, h5, h6
+- Összes címsor (H1–H6). (Elem szelektorok, vesszővel csoportosítva)
+
+p
+- Összes bekezdés.
+
+body
+- Teljes oldal törzse (a teljes dokumentum fő konténere).
+
+[Navbar / linkek]
+.nav-icon
+- Minden elem, ami class="nav-icon" (logo kép méretezése).
+
+.navbar-blur
+- Minden elem, ami class="navbar-blur" (átlátszó/fátyolos navbar).
+
+.nav-link-custom
+- Minden elem, ami class="nav-link-custom" (egyedi aláhúzás + animáció).
+
+.nav-link-custom:hover
+- Ugyanez, de csak hover állapotban.
+
+[Intro szekció]
+#intro
+- Az az elem, amelyiknek id="intro".
+
+#intro::before
+- Az intro elé beszúrt pszeudo-elem (overlay / sötétítés).
+
+#intro .container-xxl
+- Csak az #intro területen belüli .container-xxl (leszármazott szelektor).
+
+[Bootstrap .card finomhangolás]
+.card
+- class="card" (Bootstrap kártyákra plusz viselkedés).
+
+.card:hover
+- Kártya hover állapot.
+
+[Blog kártyák (saját komponens)]
+.blog-card
+- class="blog-card" (háttérképes blog kártya).
+
+.blog-card::before
+- Overlay pszeudo-elem a blog kártyán.
+
+.blog-card:hover::before
+- Overlay hover állapotban.
+
+.blog-card:hover
+- Blog kártya hover állapot (border szín változik).
+
+.card-content
+- Blog kártyán belüli tartalom wrapper.
+
+.card-content small
+- A card-content alatti <small> elemek.
+
+.card-content h5
+- A card-content alatti <h5> elemek.
+
+.card-content p
+- A card-content alatti <p> elemek.
+
+.card-content small:last-child
+- A card-content-on belül az UTOLSÓ <small>.
+
+[Barátaink szekció (saját osztályok)]
+.friends_logos
+- Logo képek.
+
+.friends_names
+- Partner nevek.
+
+.friends_desc
+- Partner leírás szöveg.
+
+[Általános szekció]
+section
+- Minden <section> elem (globális padding).
+
+[Secret page layout]
+#contain
+- Az az elem, amelyik id="contain" (középre rendezés + háttér).
+
+.team-box
+- A “kártya” doboz (csapatlista).
+
+.team-title
+- A fő cím stílusa.
+
+.member-name
+- A tagnevek stílusa.
+
+.member-name:hover
+- Tagnevek hover effekt.
+
+
+2) Kinyert CSS “parancsok” (tulajdonságok) + rövid magyarázat
+-------------------------------------------------------------
+
+font-family
+- Betűtípus család. Pl. 'Cinzel', serif.
+
+font-size
+- Betűméret. Pl. 1.4rem (a root betűméret szorzója).
+
+font-weight
+- Betűvastagság (400 normal, 600 félkövér, 900 extra vastag, stb.).
+
+letter-spacing
+- Betűk közti távolság (pl. 0.05em).
+
+line-height
+- Sormagasság (pl. 1.4).
+
+text-transform
+- Szöveg átalakítása (uppercase = csupa nagybetű).
+
+text-decoration
+- Szövegdíszítés (underline = aláhúzás).
+
+text-decoration-color
+- Az aláhúzás (vagy dekoráció) színe.
+
+text-underline-offset
+- Az aláhúzás távolsága a szövegtől.
+
+text-decoration-opacity
+- Az aláhúzás átlátszósága (0 = láthatatlan, 1 = teljes).
+
+text-shadow
+- Szöveg árnyéka/izzása.
+
+width / height
+- Szélesség / magasság. height:auto = arányt tart.
+
+min-height
+- Minimum magasság (100vh = legalább teljes képernyő).
+
+flex
+- Flex rövidítés; itt: flex: 1 = kitölti a maradék helyet.
+
+display
+- Megjelenítési mód (flex).
+
+flex-direction
+- Flex irány (column = függőleges).
+
+align-items
+- Flex keresztirányú igazítás (center / flex-end).
+
+justify-content
+- Flex főirányú igazítás (center).
+
+position
+- Pozicionálás (relative / absolute).
+
+inset
+- Rövidítés: top/right/bottom/left egyszerre (0 = teljes fedés).
+
+z-index
+- Rétegsorrend (nagyobb = előrébb). Csak pozicionált elemeknél számít.
+
+background
+- Háttér rövidítés (szín/átlátszóság együtt is lehet).
+
+background-color
+- Háttérszín (külön).
+
+background-image
+- Háttérkép (url(...)).
+
+background-size
+- Háttérkép méretezése (cover / 100% / auto 100%).
+
+background-position
+- Háttérkép pozíciója (center).
+
+background-repeat
+- Ismétlődés (no-repeat).
+
+background-attachment
+- Scroll viselkedés (scroll = a tartalommal együtt mozog).
+
+opacity
+- Elem teljes átlátszósága (0..1).
+
+backdrop-filter
+- A háttér “mögöttes tartalom” szűrése (pl. blur).
+  Fontos: nem mindig támogatott minden böngészőben.
+
+-webkit-backdrop-filter
+- Ugyanez Safari/Apple böngészők miatt (WebKit prefix).
+
+border / border-top
+- Keret. border-top: 3px solid #... csak felül.
+
+border-radius
+- Lekerekítés.
+
+overflow
+- Kilógó tartalom kezelése (hidden = levágja).
+
+box-shadow
+- Doboz árnyék.
+
+object-fit
+- Kép/videó tartalom illesztése (contain = arányt tart, belefér).
+
+cursor
+- Egérkurzor (pointer = kattintható).
+
+padding / margin
+- Belső / külső térköz. (px/rem és clamp() is lehet)
+
+transition
+- Átmenet animáció (mit, mennyi idő, milyen görbe: ease).
+
+
+3) Extra megjegyzések (hasznos, mert a kódban előjön)
+------------------------------------------------------
+- ::before overlay trükk: #intro és .blog-card esetén “ráteszel” egy félig átlátszó réteget
+  (background: rgba(...)), így olvashatóbb lesz a szöveg a háttérképen.
+
+- z-index logika:
+  #intro::before z-index:0 (overlay),
+  #intro .container-xxl z-index:1 (tartalom felül).
+
+- Duplikált szabályok:
+  A kódban több helyen ismétlődik pl. body / p / h1..h6 / .nav-icon / .navbar-blur.
+  Az utolsó (azonos specifikusságú) deklaráció felülírhatja a korábbit.
+
+- !important:
+  .navbar-blur background-ján van. Ez felülírhatja a Bootstrap bg-* osztályt is.
+  (Ha később finomhangolsz, gyakran ez okozza, hogy “miért nem változik”.)

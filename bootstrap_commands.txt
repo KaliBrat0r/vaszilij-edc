@@ -1,0 +1,298 @@
+BOOTSTRAP – ÖSSZES használt osztály + data-* attribútum (a két kódból összevonva)
+=================================================================================
+
+0) Bootstrap data-* attribútumok (JS komponensek / téma)
+--------------------------------------------------------
+data-bs-theme="dark"
+- Bootstrap 5.3 color mode: sötét téma az adott elemre (itt: body).
+
+data-bs-toggle="collapse"
+- A gomb a Collapse (összecsukás/lenyitás) komponenst vezérli.
+
+data-bs-target="#main-nav"
+- Megadja, melyik elem nyíljon/csukódjon (a #main-nav id-jú elem).
+
+1) Navbar / navigáció (komponensek)
+-----------------------------------
+navbar
+- Navbar alapkomponens.
+
+navbar-expand-md
+- md mérettől kinyílik (nem hamburger), alatta összecsukott (toggleres).
+
+navbar-dark
+- Sötét navbar variáns (világos szövegek/ikonokhoz).
+
+navbar-brand
+- Brand/logo helye a navbarban.
+
+navbar-toggler
+- Hamburger gomb stílus.
+
+navbar-toggler-icon
+- Hamburger ikon megjelenítése.
+
+collapse
+- Összecsukható tartalom alap osztálya.
+
+navbar-collapse
+- Navbaron belüli collapse tartalom stílusa/viselkedése.
+
+navbar-nav
+- Navigációs lista (ul) alap stílus.
+
+nav-item
+- Navigációs listaelem (li).
+
+nav-link
+- Navigációs link (a).
+
+sticky-top
+- “Ragad” felülre görgetéskor (position: sticky; top: 0).
+
+2) Konténerek / grid
+--------------------
+container-xxl
+- Reszponzív konténer max szélességgel (xxl töréspontig nő).
+
+container-lg
+- Reszponzív konténer max szélességgel (lg töréspontig nő).
+
+row
+- Grid sor (oszlopok szülője).
+
+col
+- Automatikus szélességű oszlop.
+
+col-md-4
+- md mérettől 4/12 szélesség.
+
+col-md-5
+- md mérettől 5/12 szélesség.
+
+col-lg-6
+- lg mérettől 6/12 (fél) szélesség.
+
+row-cols-1
+- Alapból 1 oszlop/sor.
+
+row-cols-md-2
+- md mérettől 2 oszlop/sor.
+
+row-cols-lg-3
+- lg mérettől 3 oszlop/sor.
+
+g-4
+- Gutter (sor+oszlopköz) 4-es szinten.
+
+3) Flex / igazítás / sorrend / gap
+-----------------------------------
+d-flex
+- display: flex.
+
+flex-column
+- Flex irány: oszlop.
+
+flex-lg-row
+- lg mérettől flex irány: sor.
+
+justify-content-start
+- Vízszintes igazítás: balra (flex-start).
+
+align-items-start
+- Függőleges igazítás: felül (flex-start).
+
+align-items-center
+- Függőleges középre.
+
+mx-auto
+- Középre igazítás (margin-left/right: auto).
+
+ms-auto
+- “Start” oldali auto margin (gyakorlatban: jobbra tolás flexben).
+
+gap-3
+- Flex/grid elemek közti rés 3-as szinten.
+
+order-0, order-1
+- Flex sorrend.
+
+order-lg-0, order-lg-1
+- lg mérettől flex sorrend.
+
+flex-grow-1
+- Kitölti a maradék helyet.
+
+flex-shrink-0
+- Nem zsugorodik.
+
+4) Méretek
+----------
+min-vh-100
+- Minimum magasság: 100vh (teljes képernyőmagasság).
+
+h-100
+- Magasság: 100% (szülőhöz képest).
+
+5) Térközök (padding/margin)
+----------------------------
+p-3, p-4
+- Padding minden oldalon (3-as / 4-es szint).
+
+py-5, py-3
+- Padding felül+alul (5-ös / 3-as szint).
+
+pt-1, pb-1
+- Padding-top / padding-bottom 1-es szint.
+
+m-3
+- Margin minden oldalon 3-as szint.
+
+my-3, my-4, my-5
+- Margin felül+alul (3/4/5).
+
+mb-0, mb-1, mb-2, mb-3, mb-4
+- Margin-bottom (0/1/2/3/4).
+
+mt-auto
+- margin-top: auto (flex oszlopban aljára tolás).
+
+6) Tipográfia / szöveg / megjelenés
+-----------------------------------
+display-2, display-5
+- Nagy “display” cím betűméretek.
+
+text-center
+- Szöveg középre.
+
+text-md-start
+- md mérettől balra igazított szöveg.
+
+text-lg-start
+- lg mérettől balra igazított szöveg.
+
+text-muted
+- Halványított szövegszín.
+
+text-secondary
+- Secondary szövegszín.
+
+text-danger
+- Danger (piros) szövegszín.
+
+text-uppercase
+- Nagybetűsítés.
+
+fw-bold
+- Félkövér.
+
+fw-lighter
+- Vékonyabb betűvastagság.
+
+d-block
+- display: block.
+
+7) Link / aláhúzás utilok (a Secret Page újdonságai)
+----------------------------------------------------
+text-decoration-underline
+- Szöveg aláhúzása.
+
+link-underline-danger
+- Az aláhúzás színe danger (piros).
+
+link-offset-2
+- Az aláhúzás “lejjebb tolása” (offset).
+
+link-underline-opacity-0
+- Aláhúzás átlátszóság 0% (nem látszik).
+
+link-underline-opacity-100-hover
+- Hover esetén 100% (látható) aláhúzás.
+
+8) Háttér / opacitás / színek
+-----------------------------
+bg-dark
+- Sötét háttér.
+
+bg-dark-subtle
+- Halvány sötét háttér (subtle).
+
+bg-black
+- Fekete háttér.
+
+bg-opacity-50
+- Háttérszín opacitása 50% (a bg-* utilhoz).
+
+opacity-75
+- Az elem teljes opacitása 75% (nem csak háttér!).
+
+9) Szegély / lekerekítés / árnyék
+---------------------------------
+border-0
+- Nincs szegély.
+
+border-top
+- Csak felső szegély.
+
+border-3
+- Szegélyvastagság 3-as szint.
+
+border-danger
+- Piros szegély.
+
+border-secondary
+- Secondary szegély.
+
+border-opacity-25
+- Szegély opacitás 25%.
+
+rounded-3, rounded-5
+- Lekerekítés 3-as / 5-ös szinten.
+
+shadow-lg
+- Nagy árnyék.
+
+10) Láthatóság (reszponzív display)
+-----------------------------------
+d-none
+- Elrejtés (display: none).
+
+d-md-block
+- md mérettől display: block (md alatt rejtve, ha d-none is van).
+
+11) Gombok / kártyák / képek (komponensek + utilok)
+---------------------------------------------------
+btn
+- Gomb alapstílus.
+
+btn-danger
+- Piros (danger) gomb.
+
+btn-lg
+- Nagy gomb.
+
+card
+- Kártya komponens.
+
+card-title
+- Kártya cím.
+
+card-text
+- Kártya szöveg.
+
+img-fluid
+- Reszponzív kép (max-width:100%, height:auto).
+
+img-thumbnail
+- “Thumbnail” keretes kép.
+
+MEGJEGYZÉS – ezek NEM Bootstrap osztályok a kódban
+==================================================
+Az alábbiak szerepelnek class=""-ben, de nem Bootstrap alapból (saját CSS / egyedi):
+navbar-blur, nav-icon, nav-link-custom, blog-card, card-content,
+friends_names, friends_desc, friends_logos,
+team-box, team-title, member-name, contain
+
+Továbbá: ls-1
+- Ez NEM tipikus / nem alap Bootstrap 5 utility (gyakran egyedi “letter-spacing” jellegű class szokott lenni).
+  Ha nem te definiáltad a saját CSS-ben, akkor valószínűleg nincs is hatása.

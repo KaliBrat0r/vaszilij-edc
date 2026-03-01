@@ -9,12 +9,13 @@ p {
 }
 
 body { 
-    font-family: 'Rajdhani', sans-serif; 
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem
 }
 
 /* ── Navbar ─────────────────────────────────────────────────── */
 .nav-icon { 
-    width: 40px; 
+    width: 58px; 
     height: auto; 
 }
 
@@ -25,8 +26,8 @@ body {
 }
 
 /* Nav link custom - DRY principle */
-.nav-link-custom {
-    text-decoration: underline;
+/* .nav-link-custom {
+    text-decoration: underline; 
     text-decoration-color: #dc3545;
     text-underline-offset: 0.25em;
     text-decoration-opacity: 0;
@@ -35,7 +36,7 @@ body {
 
 .nav-link-custom:hover {
     text-decoration-opacity: 1;
-}
+} */
 
 /* ── Intro ──────────────────────────────────────────────────── */
 #intro {
