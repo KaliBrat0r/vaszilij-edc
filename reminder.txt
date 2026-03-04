@@ -1,1 +1,1 @@
-blogok elrendezést javítani
+Átszíneztem a hátteret feketére, ezért majd javíni kell a szekciók színeit dark ra + opacity

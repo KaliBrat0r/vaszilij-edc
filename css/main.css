@@ -260,6 +260,16 @@ body {
     font-family: 'Rajdhani', sans-serif;
 }
 
+/*Zoom a blogokon, vetett árnyékkal*/
+.irasa-item-blog {
+    transition: all 0.3s ease;
+}
+
+.irasa-item-blog:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(220, 53, 69, 0.2);
+}
+
 /* ── Writings css ──────────────────────────────────────────────── */
 
 .irasa-item {
