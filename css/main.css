@@ -197,7 +197,7 @@ body {
     line-height: 1.5;
 }
 
-/* ── Secret page css, secret.css>unused now!!! ──────────────────────────────────────────────── */
+/* ── Secret page css ────────────────────────────────────────────── */
 
 .body_secret {
     display: flex;
@@ -253,10 +253,21 @@ body {
     color: #fff;
     text-shadow: 0 0 10px rgba(212, 0, 0, 0.6);
 }
-/* ──────────────────────────────────────────────── */
 
 /* ── Blog page css ──────────────────────────────────────────────── */
 
 #blog_filter {
     font-family: 'Rajdhani', sans-serif;
+}
+
+/* ── Writings css ──────────────────────────────────────────────── */
+
+.irasa-item {
+    transition: all 0.3s ease;
+    border-left: 2px solid #dc3545 !important;
+}
+
+.irasa-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(220, 53, 69, 0.2);
 }
