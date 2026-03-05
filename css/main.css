@@ -47,16 +47,6 @@ body {
     z-index: 1;
 }
 
-/* ── Cards (alap) ───────────────────────────────────────────── */
-.card {
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.card:hover {
-    background-color: #1a1a1a !important;
-}
-
 /* ════════════════════════════════════════════════════════════ */
 /* ── BLOG KÁRTYÁK - KÉPES VERZIÓ ────────────────────────────── */
 /* ════════════════════════════════════════════════════════════ */
@@ -280,4 +270,10 @@ body {
 .irasa-item:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 10px 25px rgba(220, 53, 69, 0.2);
+}
+
+/* ── Support page css ──────────────────────────────────────────────── */
+
+.bank-card-header-color{
+    background-color: #bd2727;
 }
