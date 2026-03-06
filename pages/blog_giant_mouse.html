@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaszilij-EDC | Üzenetek</title>
+    <title>Vaszilij-EDC | GiantMouse Ace Grand</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
@@ -22,7 +22,6 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="main-nav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a href="./blogs.html" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">BLOG</a></li>
@@ -30,11 +29,10 @@
                     <li class="nav-item"><a href="./gallery.html" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">GALÉRIA</a></li>
                     <li class="nav-item"><a href="./support.html" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">TÁMOGATÁS</a></li>
                     <li class="nav-item"><a href="./shop.html" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">BOLT</a></li>
-                    <li class="nav-item"><a href="#messages" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">ÜZENETEK</a></li>
+                    <li class="nav-item"><a href="./messages.html" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">ÜZENETEK</a></li>
                     <li class="nav-item d-md-none"><a href="https://www.facebook.com/VaszilijEdc/" class="nav-link text-decoration-underline link-underline-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">FACEBOOK OLDALUNK</a></li>
                 </ul>
             </div>
-
             <div class="d-flex align-items-center gap-3 d-none d-md-inline">
                 <a href="https://www.facebook.com/VaszilijEdc/" target="_blank" rel="noopener noreferrer" class="text-secondary-emphasis opacity-75"><i class="bi bi-facebook"></i></a>
             </div>
@@ -44,59 +42,44 @@
     <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
     <main class="flex-grow-1">
 
-    <!-- ── Üzenetek szekció ───────────────────────────────────── -->
-    <section id="messages" class="bg-black py-4">
+    <!-- ── Blog kép ───────────────────────────────────────────── -->
+    <section class="bg-black">
+        <img src="../assets/blog_pictures/giant_mouse_ace_grand_main.jpeg" class="blog-article-hero" alt="GiantMouse Ace Grand">
+    </section>
+
+    <!-- ── Blog tartalom ──────────────────────────────────────── -->
+    <section class="bg-black py-4">
         <div class="container">
-            <div class="page-header">
-                <h1>Üzenetek <i class="bi bi-envelope text-danger page-icon"></i></h1>
-                <p class="text-muted fst-italic mb-0">
-                    Van mondanivalód? Kérdésed, együttműködés ötleted, vagy írás, amit beküldenél?
-                    Írj nekünk — minden üzenetet elolvasunk.
-                </p>
+            <div class="mb-2">
+                <a href="./blogs.html" class="text-danger text-decoration-none"><i class="bi bi-arrow-left"></i> Vissza a blogokhoz</a>
             </div>
 
-            <div class="red-dash mb-3">
-                <span>Üzenj nekünk!</span>
+            <small class="text-danger text-uppercase fw-bold">Kések</small>
+            <h1 class="mt-2 mb-3">GiantMouse Ace Grand</h1>
+
+            <div class="d-flex gap-3 blog-article-meta text-muted mb-4">
+                <span><i class="bi bi-calendar3"></i> 2025. feb. 18.</span>
+                <span><i class="bi bi-person"></i> Balogh József</span>
             </div>
 
-            <!-- Form kártya -->
-            <div class="card bg-dark bg-opacity-75 border border-secondary rounded-4 shadow-lg">
-                <div class="card-header bg-danger border-bottom border-secondary py-3 rounded-top-4">
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-chat-left-text"></i>
-                        <small class="text-uppercase">Új üzenet</small>
-                    </div>
-                </div>
-                <div class="card-body p-4">
-                    <div>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label small text-secondary-emphasis text-uppercase">Név *</label>
-                                <input id="name" name="name" type="text" class="form-control bg-black bg-opacity-50 border-secondary" placeholder="A neved" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label small text-secondary-emphasis text-uppercase">E-mail *</label>
-                                <input id="email" name="email" type="email" class="form-control bg-black bg-opacity-50 border-secondary" placeholder="email@pelda.hu" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="subject" class="form-label small text-secondary-emphasis text-uppercase">Tárgy</label>
-                                <input id="subject" name="subject" type="text" class="form-control bg-black bg-opacity-50 border-secondary" placeholder="Miről szól az üzenet?">
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label small text-secondary-emphasis text-uppercase">Üzenet *</label>
-                                <textarea id="message" name="message" class="form-control bg-black bg-opacity-50 border-secondary" rows="9" placeholder="Ide írd az üzeneted..." required></textarea>
-                                <div class="d-flex justify-content-end">
-                                    <small class="text-muted mt-1">0 karakter</small>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="border-secondary opacity-50 my-4">
-                        <div class="d-flex flex-column flex-md-row gap-3 align-items-md-center justify-content-between">
-                            <small class="text-muted">Tiszteletben tartjuk az adataidat. Az üzenetedet nem tároljuk nyilvánosan.</small>
-                            <button type="submit" class="btn btn-danger px-4"><i class="bi bi-send"></i> ÜZENET KÜLDÉSE</button>
-                        </div>
-                    </div>
-                </div>
+            <hr class="border-danger opacity-50">
+
+            <p>A GiantMouse Ace Grand az egyik legelegánsabb zsebkés, amit kézbe vettem az utóbbi időben. Az olasz-amerikai dizájner páros — Jens Ansø és Jesper Voxnæs — munkája, akik a minimalista skandináv esztétikát ötvözték az olasz kézműves hagyományokkal. Az eredmény egy kompakt, mégis karakteres darab, amely első pillantásra megragadja az embert.</p>
+
+            <p>Az M390-es acél a pengén nem szorul különösebb bemutatásra: kiváló élmegtartás, korrózióállóság és relatíve jó élezhetőség jellemzi. A 76 mm-es penge elég nagy ahhoz, hogy komoly munkára is alkalmas legyen, miközben a kés összezárva kényelmesen elfér a zsebben. A drop point pengeprofil univerzális használatot tesz lehetővé, legyen szó barkácsolásról, csomagolásról vagy hétköznapi vágási feladatokról.</p>
+
+            <p>A titánium nyélszerkezet kellemes súlyt ad a késnek — nem túl nehéz, de érzed a kezedben, hogy minőségi szerszámot tartasz. A liner lock megbízhatóan rögzíti a pengét, a flipper mechanizmus pedig gyors és magabiztos nyitást biztosít. A zsebcsipesz mélyen ülő, ami azt jelenti, hogy a kés szinte láthatatlanul lapul a zsebedben.</p>
+
+            <p>Ami igazán különlegessé teszi az Ace Grand-ot, az az a fajta letisztult elegancia, ami ritkán jelenik meg ebben az árkategóriában. Nincs semmi felesleges — minden vonal, minden él, minden felület funkcionális, mégis gyönyörű. Ez az a kés, amit nem csak használni akarsz, hanem nézni is.</p>
+
+            <p>Az EDC filozófia szempontjából a GiantMouse Ace Grand tökéletesen testesíti meg azt az elvet, hogy a legjobb eszköz az, amelyik mindig nálad van. Elég kicsi ahhoz, hogy ne legyen terhes, elég nagy ahhoz, hogy számítson, és elég szép ahhoz, hogy örömmel vedd elő minden alkalommal.</p>
+
+            <p>Összességében: ha keresed azt a "one-knife" megoldást, ami egyszerre praktikus és karakteres, az Ace Grand komolyan megfontolandó. Nem olcsó, de az értéket minden egyes nyitásnál érezni fogod.</p>
+
+            <hr class="border-secondary opacity-50 mt-5">
+            <div class="d-flex justify-content-between align-items-center text-muted">
+                <small>Szerző: Balogh József</small>
+                <a href="./blogs.html" class="btn btn-outline-danger btn-sm"><i class="bi bi-arrow-left"></i> Összes blog</a>
             </div>
         </div>
     </section>
@@ -107,8 +90,7 @@
     <footer class="border-top border-danger bg-black bg-opacity-75 text-secondary text-center py-3">
         <div class="container-xxl">
             <p class="mb-0">&copy; 2025 Vaszilij EDC. Minden jog fenntartva.
-                <a href="https://www.facebook.com/VaszilijEdc/" target="_blank" rel="noopener noreferrer" class="text-danger opacity-75"><i class="bi bi-facebook"></i></a>
-            </p>
+                <a href="https://www.facebook.com/VaszilijEdc/" target="_blank" rel="noopener noreferrer" class="text-danger opacity-75"><i class="bi bi-facebook"></i></a></p>
             <div><a href="./blades_intro.html"><img src="../assets/blades_logo.svg" alt="teeth" width="36px"></a> Blades | Web developement Team's demo</div>
         </div>
     </footer>
