@@ -316,3 +316,10 @@ body {
   height: 450px;
   filter: invert(90%) hue-rotate(180deg) contrast(90%) saturate(80%);
 }
+
+.red-dash::before {
+    content: "— ";
+    color: #dc3545;
+    margin-right: 10px;
+    font-weight: bold;
+}
